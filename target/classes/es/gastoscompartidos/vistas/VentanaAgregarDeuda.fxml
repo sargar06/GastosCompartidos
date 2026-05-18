@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="es.gastoscompartidos.controladores.VentanaAgregarDeudaController">
+
+    <VBox spacing="10" style="-fx-padding: 14;"
+          AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0"
+          AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+
+        <Label text="AÑADIR DEUDA" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+
+        <HBox spacing="20" VBox.vgrow="ALWAYS">
+
+            <!-- Izquierda: importe -->
+            <VBox spacing="8" HBox.hgrow="ALWAYS">
+                <Label text="IMPORTE DE LA DEUDA" style="-fx-font-weight: bold;"/>
+                <TextField fx:id="txtCantidad"    promptText="CANTIDAD A PAGAR"/>
+                <TextField fx:id="txtDescripcion" promptText="DESCRIPCION DE LA DEUDA"/>
+                <Label fx:id="lblMensaje" text="" style="-fx-text-fill: red;" wrapText="true"/>
+            </VBox>
+
+            <!-- Derecha: deudores -->
+            <VBox spacing="6" prefWidth="190">
+                <Label text="USUARIOS DEUDORES" style="-fx-font-weight: bold;"/>
+                <ListView fx:id="listDeudores" prefHeight="160"/>
+            </VBox>
+
+        </HBox>
+
+        <HBox alignment="CENTER">
+            <Button text="AÑADIR DEUDA" onAction="#onClicAnadirDeuda"/>
+        </HBox>
+
+    </VBox>
+</AnchorPane>

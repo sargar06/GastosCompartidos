@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="es.gastoscompartidos.controladores.VentanaPrincipalController"
+      spacing="10">
+
+    <!-- MENÚ -->
+    <MenuBar>
+        <Menu text="Sesión">
+            <MenuItem text="Login"  onAction="#onClicLogin"/>
+            <SeparatorMenuItem/>
+            <MenuItem text="Salir"  onAction="#onClicSalir"/>
+        </Menu>
+        <Menu text="Usuarios">
+            <MenuItem text="Agregar Usuario"  onAction="#onClicAgregarUsuario"/>
+            <MenuItem text="Eliminar Usuario" onAction="#onClicEliminarUsuario"/>
+        </Menu>
+        <Menu text="Grupos">
+            <MenuItem text="Crear Grupo" onAction="#onClicCrearGrupo"/>
+        </Menu>
+        <Menu text="Gastos">
+            <MenuItem text="Agregar Pago"       onAction="#onClicAgregarPago"/>
+            <MenuItem text="Historial de Pagos" onAction="#onClicHistorial"/>
+            <SeparatorMenuItem/>
+            <MenuItem text="Finalizar" onAction="#onClicFinalizar"/>
+        </Menu>
+    </MenuBar>
+
+    <!-- BARRA ESTADO -->
+    <HBox style="-fx-background-color: #dddddd; -fx-padding: 4 8 4 8;">
+        <Label fx:id="lblEstado" text="Sin sesión iniciada"/>
+    </HBox>
+
+    <!-- CONTENIDO -->
+    <VBox spacing="10" style="-fx-padding: 20;" VBox.vgrow="ALWAYS">
+
+        <Label text="Usuarios registrados:" style="-fx-font-weight: bold;"/>
+        <ListView fx:id="listUsuarios" prefHeight="300"/>
+
+    </VBox>
+
+</VBox>

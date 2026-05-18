@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="es.gastoscompartidos.controladores.VentanaHistorialController">
+
+    <VBox spacing="10" alignment="CENTER" style="-fx-padding: 16;"
+          AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0"
+          AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+
+        <Label text="HISTORIAL" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+        <TextArea fx:id="txtHistorial"
+                  prefHeight="260" wrapText="true" editable="false"
+                  VBox.vgrow="ALWAYS"/>
+
+        <Button text="SALIR" onAction="#onClicSalir"/>
+
+    </VBox>
+</AnchorPane>

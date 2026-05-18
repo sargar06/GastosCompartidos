@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="es.gastoscompartidos.controladores.VentanaAgregarUsuarioController">
+
+    <VBox spacing="10" style="-fx-padding: 20;"
+          AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0"
+          AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+
+        <Label text="AGREGAR USUARIO" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+
+        <Label text="Nombre:"/>
+        <TextField fx:id="txtNombre" promptText="Nombre completo"/>
+
+        <Label text="Email:"/>
+        <TextField fx:id="txtEmail" promptText="correo@ejemplo.com"/>
+
+        <Label text="Método de pago:"/>
+        <TextField fx:id="txtMetodoPago" promptText="Bizum, Tarjeta, Efectivo..."/>
+
+        <Label fx:id="lblMensaje" text="" style="-fx-text-fill: red;"/>
+
+        <HBox spacing="10" alignment="CENTER_RIGHT">
+            <Button text="Cancelar" onAction="#onClicCancelar"/>
+            <Button text="Guardar"  onAction="#onClicGuardar"/>
+        </HBox>
+
+    </VBox>
+</AnchorPane>

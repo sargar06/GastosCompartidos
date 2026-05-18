@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="es.gastoscompartidos.controladores.VentanaCrearGrupoController">
+
+    <VBox spacing="10" style="-fx-padding: 14;"
+          AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0"
+          AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+
+        <Label text="CREAR GRUPO" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+
+        <!-- Fila principal: lista izquierda, campos derecha -->
+        <HBox spacing="16" VBox.vgrow="ALWAYS">
+
+            <VBox spacing="6" HBox.hgrow="ALWAYS">
+                <Label text="USUARIOS DEL GRUPO:" style="-fx-font-weight: bold;"/>
+                <ListView fx:id="listUsuarios" prefHeight="200"/>
+                <Button text="AÑADIR MÁS USUARIOS" onAction="#onClicSeleccionarTodos"/>
+            </VBox>
+
+            <VBox spacing="8" prefWidth="190">
+                <TextField fx:id="txtNombreGrupo" promptText="NOMBRE DEL GRUPO"/>
+                <TextField fx:id="txtDescripcion"  promptText="DESCRIPCION"/>
+                <Label fx:id="lblMensaje" text="" style="-fx-text-fill: red;" wrapText="true"/>
+            </VBox>
+
+        </HBox>
+
+        <!-- Botones -->
+        <HBox spacing="10">
+            <Button text="CANCELAR"    onAction="#onClicCancelar"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button text="CREAR GRUPO" onAction="#onClicCrearGrupo"/>
+        </HBox>
+
+    </VBox>
+</AnchorPane>

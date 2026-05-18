@@ -1,0 +1,4 @@
+# id;nombre;email;metodoPago
+1;Ana García;ana@email.com;Bizum
+2;Carlos López;carlos@email.com;Efectivo
+3;María Sanz;maria@email.com;Tarjeta
